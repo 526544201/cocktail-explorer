@@ -1,0 +1,26 @@
+{
+    "name": "9229146/cocktail-explorer-backend",
+    "description": "Backend API for the Cocktail Explorer",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "guzzlehttp/guzzle": "^7.8",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "fix": "php-cs-fixer fix"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.58"
+    }
+}
