@@ -1,0 +1,10 @@
+# Environment variables
+/backend/.env
+
+# Composer / PHP
+/backend/vendor/
+/backend/composer.lock
+/backend/.phpunit.result.cache
+
+# IDE
+.vscode/

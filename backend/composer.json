@@ -16,12 +16,19 @@
             "App\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "scripts": {
         "start": "php -S 0.0.0.0:8080 -t public",
         "lint": "php-cs-fixer fix --dry-run --diff",
-        "fix": "php-cs-fixer fix"
+        "fix": "php-cs-fixer fix",
+        "test": "phpunit"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.58"
+        "friendsofphp/php-cs-fixer": "^3.58",
+        "phpunit/phpunit": "^11.5"
     }
 }
