@@ -20,6 +20,10 @@ class ApiKeyMiddleware implements MiddlewareInterface
 
     public function process(Request $request, RequestHandler $handler): Response
     {
+        if ($request->getMethod() === 'OPTIONS') {
+            return $handler->handle($request);
+        }
+        
         $apiKey = $request->getHeaderLine('X-API-KEY');
 
         if (empty($apiKey) || $apiKey !== $this->validApiKey) {
