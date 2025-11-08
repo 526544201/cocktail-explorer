@@ -1,5 +1,6 @@
 # Environment variables
 /backend/.env
+/frontend/.env
 
 # Composer / PHP
 /backend/vendor/
