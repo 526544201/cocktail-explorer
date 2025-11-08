@@ -3,13 +3,15 @@ name: Backend CI (PHP)
 on:
   push:
     branches: [ main ]
-    # only if backend is affected
+    # only if backend or self is affected
     paths:
       - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
   pull_request:
     branches: [ main ]
     paths:
       - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
 
 jobs:
   build-and-test:
@@ -34,6 +36,8 @@ jobs:
 
       - name: Install Composer dependencies
         uses: ramsey/composer-install@v3
+        with:
+          working-directory: ./backend
 
       - name: Create .env file for testing
         run: |
